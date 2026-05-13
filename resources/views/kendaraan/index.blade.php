@@ -101,7 +101,10 @@
 
                         <td class="d-flex gap-2">
 
-                            
+                            <a href="/kendaraan/{{ $item->id }}/edit"
+                                class="btn btn-edit btn-sm">
+                                Edit
+                            </a>
 
                             <form action="/kendaraan/{{ $item->id }}" method="POST"
                                 onsubmit="return confirm('Hapus kendaraan dari antrean?')">
@@ -109,7 +112,10 @@
                                 @csrf
                                 @method('DELETE')
 
-                                
+                                <button type="submit"
+                                    class="btn btn-delete btn-sm">
+                                    Hapus
+                                </button>
 
                             </form>
 
